@@ -7,7 +7,7 @@ const axios = require('axios');
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-app.options('*', cors()) // include before other routes
+
 
 const posts = {};
 
@@ -33,8 +33,11 @@ app.post('/posts', async (req, res) => {
     res.status(201).send(posts[id]);
 });
 
-app.options('/posts', cors()) // enable pre-flight request for DELETE request
+app.post('/events', (req, res) => {
+    console.log('Received Event', req.body.type);
 
+    res.send({});
+});
 
 app.listen(4000, () => {
     console.log("Listening on 4000");
