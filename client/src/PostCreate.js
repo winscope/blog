@@ -7,7 +7,7 @@ const PostCreate = () => {
     const onSubmit = async (event) => {
         event.preventDefault();
 
-        await axios.post('http://localhost:4000/posts', {
+        await axios.post('https://fkornel-winscope-blog-9jxr5ggcp9xj-4000.githubpreview.dev/posts', {
             title
         });
 
