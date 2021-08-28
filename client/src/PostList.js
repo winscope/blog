@@ -7,8 +7,8 @@ const PostList = () => {
     const [posts, setPosts] = useState({});
 
     const fetchPosts = async () => {
-        const res = await axios.get('https://fkornel-winscope-blog-9jxr5ggcp9xj-4000.githubpreview.dev/posts');
-
+        const res = await axios.get('https://fkornel-winscope-blog-9jxr5ggcp9xj-4002.githubpreview.dev/posts');
+        
         setPosts(res.data);
     };
 
@@ -25,7 +25,7 @@ const PostList = () => {
                 >
                     <div className="card-body">
                         <h3>{post.title}</h3>
-                        <CommentList postId={post.id} />
+                        <CommentList comments={post.comments} />
                         <CommentCreate postId={post.id} />
                     </div>
 
