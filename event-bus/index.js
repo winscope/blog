@@ -12,10 +12,10 @@ app.post('/events', (req, res) => {
 
     events.push(event);
 
-    axios.post('https://fkornel-winscope-blog-9jxr5ggcp9xj-4000.githubpreview.dev/events', event);
-    axios.post('https://fkornel-winscope-blog-9jxr5ggcp9xj-4001.githubpreview.dev/events', event);
-    axios.post('https://fkornel-winscope-blog-9jxr5ggcp9xj-4002.githubpreview.dev/events', event);
-    axios.post('https://fkornel-winscope-blog-9jxr5ggcp9xj-4003.githubpreview.dev/events', event);
+    axios.post('http://localhost:4000/events', event);
+    axios.post('http://localhost:4001/events', event);
+    axios.post('http://localhost:4002/events', event);
+    axios.post('http://localhost:4003/events', event);
 
     res.send({ status: 'OK' });
 });

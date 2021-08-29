@@ -7,7 +7,7 @@ const CommentCreate = ({ postId }) => {
     const onSubmit = async (event) => {
         event.preventDefault();
 
-        await axios.post(`https://fkornel-winscope-blog-9jxr5ggcp9xj-4001.githubpreview.dev/posts/${postId}/comments`, {
+        await axios.post(`http://localhost:4001/posts/${postId}/comments`, {
             content
         });
 

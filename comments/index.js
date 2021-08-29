@@ -24,7 +24,7 @@ app.post('/posts/:id/comments', async (req, res) => {
 
     commentsByPostId[req.params.id] = comments;
     
-    await axios.post('https://fkornel-winscope-blog-9jxr5ggcp9xj-4005.githubpreview.dev/events', {
+    await axios.post('http://localhost:4005/events', {
         type: 'CommentCreated',
         data: {
             id: commentId, 
@@ -51,7 +51,7 @@ app.post('/events', async (req, res) => {
         });
         comments.status = status;
 
-        await axios.post('https://fkornel-winscope-blog-9jxr5ggcp9xj-4005.githubpreview.dev/events', {
+        await axios.post('http://localhost:4005/events', {
             type: 'CommentUpdated',
             data: {
                 id,

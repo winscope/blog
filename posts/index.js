@@ -23,7 +23,7 @@ app.post('/posts', async (req, res) => {
         id, title
     };
 
-    await axios.post('https://fkornel-winscope-blog-9jxr5ggcp9xj-4005.githubpreview.dev/events', {
+    await axios.post('http://localhost:4005/events', {
         type: 'PostCreated',
         data: {
             id, title

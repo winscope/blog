@@ -52,7 +52,7 @@ app.post('/events', (req, res) => {
 app.listen(4002, async () => {
     console.log("Listening on 4002");
 
-    const res = await axios.get('https://fkornel-winscope-blog-9jxr5ggcp9xj-4005.githubpreview.dev/events');
+    const res = await axios.get('http://localhost:4005/events');
 
     for (let event of res.data) {
         console.log('Processing event: ', event.type);
