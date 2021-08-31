@@ -7,7 +7,7 @@ const PostCreate = () => {
     const onSubmit = async (event) => {
         event.preventDefault();
 
-        await axios.post('http://localhost:4000/posts', {
+        await axios.post('http://winscope.hu:8081/posts/create', {
             title
         });
 
